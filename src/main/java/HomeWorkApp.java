@@ -1,9 +1,13 @@
 public class HomeWorkApp {
     public static void main(String[] args) {
-        printThreeWords();
+        /*printThreeWords();
         checkSumSign();
         printColor();
-        compareNumbers();
+        compareNumbers();*/
+        System.out.println(sumNumbers(5, 7));
+        Sum(5);
+        PrintStr("Hi!", 2);
+        System.out.println(IsYear(1700));
     }
 
     public static void printThreeWords(){
@@ -41,5 +45,27 @@ public class HomeWorkApp {
         } else {
             System.out.println("a < b");
         }
+    }
+
+    public static boolean sumNumbers(int a, int b) {
+        return (a + b) >=10 && (a + b) <=20;
+    }
+
+    public static void Sum(int a) {
+        if (a > 0) {
+            System.out.println("Число положительное");
+        } else {
+            System.out.println("Число отрицательное");
+        }
+    }
+
+    public static void PrintStr(String str, int count) {
+        for (int j = 1; j <= count; j++) {
+            System.out.println(str);
+        }
+    }
+
+    public static boolean IsYear(long year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
     }
 }
